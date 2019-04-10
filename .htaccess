@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.baza-66.ru$ [NC]
+RewriteRule ^(.*)$ https://baza-66.ru/$1 [R=301,L]
